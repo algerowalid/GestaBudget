@@ -215,14 +215,14 @@ public class DatabaseManager {
             values.put(KEY_RENATABILITE, rentabilite);
 
         // insert() retourne l'id du nouvel enregistrement insÃ©rÃ©, ou -1 en cas d'erreur
-            result = db.insert(TABLE_ACTION, null, values);
+            result = db.insert(TABLE_TACHE, null, values);
         return result;
     }
 
     // Get all TACHES
     public Cursor getAllTaches() {
         // sÃ©lection de tous les enregistrements de la table
-        return db.rawQuery("SELECT * FROM " + TABLE_TACHE+" ORDER BY id DESC", null);
+        return db.rawQuery("SELECT * FROM " + TABLE_TACHE+" where  "+KEY_FLAG_SUPP+"<2 ORDER BY id DESC", null);
     }
 
     // supprimer employe
@@ -260,8 +260,6 @@ public class DatabaseManager {
         return ap;
     }
 
-
-
     // Finaliser  Tache
     public int FinaliseTache(int id,String date) {
         // modification d'un enregistrement
@@ -279,5 +277,22 @@ public class DatabaseManager {
 
 
 
+
+    // Parametre
+
+    // Ajouter
+    public long addParametre(String nom, String valeur , int flag) {
+        // Ajout d'un enregistrement dans la table
+
+        long result = 0;
+        ContentValues values = new ContentValues();
+        values.put(KEY_NOM, nom);
+        values.put(KEY_VALEUR, valeur);
+        values.put(KEY_FLAG, flag);
+
+        // insert() retourne l'id du nouvel enregistrement insÃ©rÃ©, ou -1 en cas d'erreur
+        result = db.insert(TABLE_PARAMETRE, null, values);
+        return result;
+    }
 
 }
