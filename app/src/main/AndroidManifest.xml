@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_login" />
-        <activity android:name=".Activity_ajout_tache" />
+        <activity android:name=".Activity_tache" />
         <activity android:name=".Activity_Action" />
         <activity android:name=".Activity_accueil" />
         <activity android:name=".Activity_recap" />

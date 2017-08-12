@@ -8,6 +8,6 @@ public class Actuvity_parametre extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actuvity_parametre);
+        setContentView(R.layout.activity_parametre);
     }
 }

@@ -23,7 +23,7 @@
             android:layout_weight="01">
 
             <TextView
-                android:text="Les champs  pour ajouter une action"
+                android:text="de champes pour une recherche rapid "
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView" />
@@ -37,7 +37,7 @@
             android:id="@+id/dsq">
 
             <TextView
-                android:text="Button pour ajouter supprimer modifier"
+                android:text="tout les buttons ( Ajout, modifier, supprimer, recherche reinitialiser "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2"
@@ -51,7 +51,7 @@
             android:layout_weight="01">
 
             <TextView
-                android:text="Une list view qui affiche toutes les actions "
+                android:text="Une list view qui affiche toutes les action"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView3" />

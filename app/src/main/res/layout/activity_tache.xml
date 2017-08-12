@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.eurequat_algerie.gestabudget.Activity_ajout_tache">
+    tools:context="com.example.eurequat_algerie.gestabudget.Activity_tache">
 
 
 
@@ -17,11 +17,10 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="01">
+            android:layout_height="54dp">
 
             <TextView
-                android:text="Les champs  pour ajouter une tache"
+                android:text="Une petite récap des taches ( nombre, montant global versser,  montant dépenser ...) "
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView" />
@@ -30,11 +29,10 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="01">
+            android:layout_height="180dp">
 
             <TextView
-                android:text="Button pour ajouter supprimer modifier"
+                android:text="Tout les button ( Ajout, Modifier, supprimer,finaliser,  recherche , reinit ...)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2"
