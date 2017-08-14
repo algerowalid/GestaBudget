@@ -13,4 +13,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/button2"
         android:onClick="tst" />
+
+    <Button
+        android:text="Action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button12"
+        android:onClick="go_action" />
 </LinearLayout>
