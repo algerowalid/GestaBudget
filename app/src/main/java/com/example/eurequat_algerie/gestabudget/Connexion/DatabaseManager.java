@@ -3,9 +3,12 @@ package com.example.eurequat_algerie.gestabudget.Connexion;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 public class DatabaseManager {
+
+
 
     public static boolean FlgDBR = true;
 
@@ -32,28 +35,29 @@ public class DatabaseManager {
 
 
         // action
-    public static final String KEY_DESIGNATION= "flag_synchro";
-    public static final String KEY_FLAG_IO= "flag_supp";
+    public static final String KEY_DESIGNATION= "designation";
+    public static final String KEY_FLAG_IO= "flag_io";
 
         //RTA
-    public static final String KEY_ID_TACHE = "id";
-    public static final String KEY_ID_ACTION= "id";
-    public static final String KEY_DATE= "id";
-    public static final String KEY_QNT= "id";
-    public static final String KEY_PU= "dated";
-    public static final String KEY_TOTAL= "datef";
+    public static final String KEY_ID_TACHE = "id_tache";
+    public static final String KEY_ID_ACTION= "id_action";
+    public static final String KEY_DATE= "date";
+    public static final String KEY_QNT= "qnt";
+    public static final String KEY_PU= "pu";
+    public static final String KEY_TOTAL= "total";
 
 
         //Parametre
+
     public static final String KEY_VALEUR= "valeur";
-    public static final String KEY_FLAG= "valeur";
+    public static final String KEY_FLAG= "flag";
 
 
 
     ///////// les creations de table
 
 
-    public static final String CREATE_TABLE_TACHE= "CREATE TABLE IF NOT EXISTS " + TABLE_ACTION+
+    public static final String CREATE_TABLE_TACHE= "CREATE TABLE IF NOT EXISTS " + TABLE_TACHE+
             " (" +
             " " + KEY_ID + " integer primary key autoincrement," +
             " " + KEY_NOM + " text," +
@@ -203,6 +207,7 @@ public class DatabaseManager {
      */
 
     // Ajouter
+    //j'ai changé le type de rentabilite de int vers string
     public long addTache(String nom, String info, String description , String dated, int rentabilite) {
         // Ajout d'un enregistrement dans la table
 
@@ -222,8 +227,10 @@ public class DatabaseManager {
     // Get all TACHES
     public Cursor getAllTaches() {
         // sÃ©lection de tous les enregistrements de la table
-        return db.rawQuery("SELECT * FROM " + TABLE_TACHE+" where  "+KEY_FLAG_SUPP+"<2 ORDER BY id DESC", null);
+        return db.rawQuery("SELECT * FROM " + TABLE_TACHE+" WHERE "+KEY_FLAG_SUPP+"<2 ORDER BY id DESC", null);
     }
+
+
 
     // supprimer employe
     public int SuppTache(int id) {
@@ -232,7 +239,7 @@ public class DatabaseManager {
 
         int a = 0;
         ContentValues values = new ContentValues();
-        values.put(KEY_FLAG_SUPP,1);
+        values.put(KEY_FLAG_SUPP,2);
             String where = KEY_ID + "=" + id;
             //  String[] whereArgs = {employe.getId()+""};
             a = db.delete(TABLE_TACHE, where, null);
@@ -267,6 +274,7 @@ public class DatabaseManager {
         int ap = 0;
         ContentValues values = new ContentValues();
         values.put(KEY_DATE_FIN, date);
+        values.put(KEY_FLAG_SUPP, 1);
         String where = KEY_ID + "=" + id;
         // String[] whereArgs = {employe.getId()+""};
 
@@ -294,5 +302,6 @@ public class DatabaseManager {
         result = db.insert(TABLE_PARAMETRE, null, values);
         return result;
     }
+
 
 }

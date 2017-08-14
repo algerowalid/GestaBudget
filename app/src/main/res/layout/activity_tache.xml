@@ -20,10 +20,22 @@
             android:layout_height="54dp">
 
             <TextView
-                android:text="Une petite récap des taches ( nombre, montant global versser,  montant dépenser ...) "
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView" />
+                android:id="@+id/nombre" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/montantgv" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/montantgd" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -31,13 +43,50 @@
             android:layout_width="match_parent"
             android:layout_height="180dp">
 
-            <TextView
-                android:text="Tout les button ( Ajout, Modifier, supprimer,finaliser,  recherche , reinit ...)"
+            <Button
+                android:text="+"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView2"
+                android:id="@+id/ajouter"
+                android:layout_weight="1"
+                android:onClick="ajoute" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button5"
                 android:layout_weight="1" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button7"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button8"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button9"
+                android:layout_weight="1" />
+
         </LinearLayout>
+
+        <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:layout_weight="1" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -45,12 +94,13 @@
             android:layout_height="match_parent"
             android:layout_weight="01">
 
-            <TextView
-                android:text="Une list view qui affiche toutes les taches  "
+            <ListView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView3" />
+                android:layout_height="match_parent"
+                android:id="@+id/listev" />
+
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

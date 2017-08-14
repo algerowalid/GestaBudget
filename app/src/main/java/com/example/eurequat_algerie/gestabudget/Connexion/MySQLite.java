@@ -11,7 +11,7 @@ public class MySQLite extends SQLiteOpenHelper {
 
 
 
-    private static final String DATABASE_NAME = "EasyRelay.sqlite";
+    private static final String DATABASE_NAME = "innodev.sqlite";
     private static final int DATABASE_VERSION =1;
 
     public MySQLite(Context context) {
@@ -22,7 +22,7 @@ public class MySQLite extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         // Cr?ation de la base de donn?es
         // on ex?cute ici les requ?tes de cr?ation des tables
-        sqLiteDatabase.execSQL(DatabaseManager.CREATE_TABLE_ACTION); // création table "employe"
+       sqLiteDatabase.execSQL(DatabaseManager.CREATE_TABLE_ACTION); // création table "employe"
         sqLiteDatabase.execSQL(DatabaseManager.CREATE_TABLE_TACHE); // création table "client"
         sqLiteDatabase.execSQL(DatabaseManager.CREATE_TABLE_RTA); // création table "client"
         sqLiteDatabase.execSQL(DatabaseManager.CREATE_TABLE_PARAMETRE); // création table "client"

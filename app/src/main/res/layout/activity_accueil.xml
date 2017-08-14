@@ -7,4 +7,10 @@
     android:orientation="vertical"
     tools:context="com.example.eurequat_algerie.gestabudget.Activity_accueil">
 
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:onClick="tst" />
 </LinearLayout>

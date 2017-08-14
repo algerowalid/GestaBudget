@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.eurequat_algerie.gestabudget.Connexion.DatabaseManager;
 
@@ -26,11 +27,18 @@ public class MainActivity extends AppCompatActivity {
             this.finish();
             Intent NewIntent = new Intent(MainActivity.this,Activity_login.class);
             startActivity(NewIntent);
-            
+
+            d.open();
+            String req2 ="select count(id) as id from parametre ";
+            int h = d.getInt(req2,"id");
+
+            d.close();
+
         }else{
             d.open();
             d.addParametre("login","admin",0);
             d.addParametre("password","admin",0);
+            d.addTache("hanane", "hanane", "hanane" , "2018", 0);
             d.close();
 
             this.finish();

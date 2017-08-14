@@ -8,16 +8,19 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.innodev.easy_relay.R;
+import com.example.eurequat_algerie.gestabudget.R;
+
 
 import java.util.ArrayList;
 
 /**
  * Created by Eurequat-Algerie on 25/04/2017.
  */
-public class Adapter_caisse extends BaseAdapter {
 
-    ArrayList<caisse> myList = new ArrayList<caisse>();
+public class Adapter_tache extends BaseAdapter {
+ 
+
+    ArrayList<tache> myList = new ArrayList<tache>();
     LayoutInflater inflater;
     Context context;
     int firstColorValue = Color.parseColor("#dff0f7");
@@ -25,7 +28,7 @@ public class Adapter_caisse extends BaseAdapter {
     private int[] colors = new int[] { firstColorValue, secondColorValue};
 
 
-    public Adapter_caisse(Context context, ArrayList<caisse> myList) {
+    public Adapter_tache(Context context, ArrayList<tache> myList) {
         this.myList = myList;
         this.context = context;
         inflater = LayoutInflater.from(this.context);
@@ -36,7 +39,7 @@ public class Adapter_caisse extends BaseAdapter {
         return myList.size();
     }
 
-    public caisse getItem(int position) {
+    public tache getItem(int position) {
         return myList.get(position);
     }
 
@@ -48,34 +51,32 @@ public class Adapter_caisse extends BaseAdapter {
         MyViewHolder mViewHolder;
 
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.element_caisse, parent, false);
+            convertView = inflater.inflate(R.layout.element_tache, parent, false);
             mViewHolder = new MyViewHolder(convertView);
             convertView.setTag(mViewHolder);
         } else {
             mViewHolder = (MyViewHolder) convertView.getTag();
         }
 
-        caisse currentListData = getItem(position);
+        tache currentListData = getItem(position);
 
         int colorPos = position % colors.length;
         convertView.setBackgroundColor(colors[colorPos]);
 
-        mViewHolder.id.setText("Caisse "+currentListData.getId());
-        mViewHolder.mont.setText(""+currentListData.getMontant());
-        mViewHolder.dd.setText(""+currentListData.getDated());
-        mViewHolder.df.setText(""+currentListData.getDatef());
+        mViewHolder.nom.setText(currentListData.getNom());
+        mViewHolder.info.setText(""+currentListData.getInfo());
+
 
         return convertView;
     }
 
     private class MyViewHolder {
-        TextView id,mont,dd,df;
+        TextView nom, info;
 
         public MyViewHolder(View item) {
-            id= (TextView) item.findViewById(R.id.caisse);
-            mont = (TextView) item.findViewById(R.id.montant);
-            dd = (TextView) item.findViewById(R.id.dated);
-            df = (TextView) item.findViewById(R.id.datef);
+            nom= (TextView) item.findViewById(R.id.nom);
+            info = (TextView) item.findViewById(R.id.inf);
+
 
         }
     }
