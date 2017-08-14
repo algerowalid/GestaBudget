@@ -320,11 +320,55 @@ public class DatabaseManager {
         return ap;
     }
 
+<<<<<<< HEAD
     public Cursor getAllParametres() {
         // sÃ©lection de tous les enregistrements de la table
         return db.rawQuery("SELECT * FROM " + TABLE_PARAMETRE+" WHERE "+KEY_FLAG_SUPP+"<2 ORDER BY id DESC", null);
     }
     public int SuppParametre(int id) {
+=======
+
+
+
+    // Action
+
+    // Ajouter
+    public long addAction(String nom, int flag) {
+        // Ajout d'un enregistrement dans la table
+
+        long result = 0;
+        ContentValues values = new ContentValues();
+        values.put(KEY_DESIGNATION, nom);
+        values.put(KEY_FLAG_IO, flag);
+
+        // insert() retourne l'id du nouvel enregistrement insÃ©rÃ©, ou -1 en cas d'erreur
+        result = db.insert(TABLE_ACTION, null, values);
+        return result;
+    }
+
+    // modifier  Tache
+    public int modAction(int id, String nom, int info) {
+        // modification d'un enregistrement
+        // valeur de retour : (int) nombre de lignes affectÃ©es par la requÃªte
+
+        int ap = 0;
+        ContentValues values = new ContentValues();
+        values.put(KEY_DESIGNATION, nom);
+        values.put(KEY_FLAG_IO, info);
+
+        String where = KEY_ID + "=" + id;
+        // String[] whereArgs = {employe.getId()+""};
+
+        ap = db.update(TABLE_ACTION, values, where, null);
+
+        return ap;
+    }
+
+
+
+    // supprimer employe
+    public int SuppAction(int id) {
+>>>>>>> 6e2a315e6c4046244fb3e1e4ed19e3f8df0e28cc
         // suppression d'un enregistrement
         // valeur de retour : (int) nombre de lignes affectÃ©es par la clause WHERE, 0 sinon
 
@@ -333,8 +377,23 @@ public class DatabaseManager {
         values.put(KEY_FLAG_SUPP,2);
         String where = KEY_ID + "=" + id;
         //  String[] whereArgs = {employe.getId()+""};
+<<<<<<< HEAD
         a = db.delete(TABLE_PARAMETRE, where, null);
 
         return a;
     }
+=======
+        a = db.delete(TABLE_ACTION, where, null);
+
+        return a;
+    }
+
+    public Cursor getAllActions() {
+        // sÃ©lection de tous les enregistrements de la table
+        return db.rawQuery("SELECT * FROM " + TABLE_ACTION+" WHERE "+KEY_FLAG_SUPP+"<2 ORDER BY id DESC", null);
+    }
+
+
+
+>>>>>>> 6e2a315e6c4046244fb3e1e4ed19e3f8df0e28cc
 }
