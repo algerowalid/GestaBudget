@@ -6,8 +6,8 @@ package com.example.eurequat_algerie.gestabudget.Element_list;
 
 public class tache {
 
-   int id, rentabilite;
-    String nom, info, description,date;
+     int id, rentabilite;
+     String nom, info, description,date;
 
 
 

@@ -10,74 +10,62 @@ import android.widget.TextView;
 
 import com.example.eurequat_algerie.gestabudget.R;
 
-
 import java.util.ArrayList;
 
 /**
- * Created by Eurequat-Algerie on 25/04/2017.
+ * Created by HP on 8/14/2017.
  */
 
-public class Adapter_tache extends BaseAdapter {
- 
-
-    ArrayList<tache> myList = new ArrayList<tache>();
+public class Adapter_parametre extends BaseAdapter {
+    ArrayList<parametre> myList = new ArrayList<parametre>();
     LayoutInflater inflater;
     Context context;
     int firstColorValue = Color.parseColor("#dff0f7");
     int secondColorValue = Color.parseColor("#f8fefe");
     private int[] colors = new int[] { firstColorValue, secondColorValue};
 
-
-    public Adapter_tache(Context context, ArrayList<tache> myList) {
+    public Adapter_parametre(Context context, ArrayList<parametre> myList) {
         this.myList = myList;
         this.context = context;
         inflater = LayoutInflater.from(this.context);
     }
 
-
     public int getCount() {
         return myList.size();
     }
 
-    public tache getItem(int position) {
+    public parametre getItem(int position) {
         return myList.get(position);
     }
 
     public long getItemId(int position) {
-        return 0;
-    }
+        return 0;}
 
+    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        MyViewHolder mViewHolder;
-
+      MyViewHolder mViewHolder;
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.element_tache, parent, false);
-            mViewHolder = new MyViewHolder(convertView);
+            convertView = inflater.inflate(R.layout.element_parametre, parent, false);
+            mViewHolder = new Adapter_parametre.MyViewHolder(convertView);
             convertView.setTag(mViewHolder);
         } else {
-            mViewHolder = (MyViewHolder) convertView.getTag();
+            mViewHolder = (Adapter_parametre.MyViewHolder) convertView.getTag();
         }
-
-        tache currentListData = getItem(position);
-
+        parametre currentListData = getItem(position);
         int colorPos = position % colors.length;
         convertView.setBackgroundColor(colors[colorPos]);
 
         mViewHolder.nom.setText(currentListData.getNom());
-        mViewHolder.info.setText(""+currentListData.getInfo());
-
-
+        mViewHolder.vale.setText(""+currentListData.getValeur());
         return convertView;
     }
-
-    public class MyViewHolder {
-        TextView nom, info;
+    private class MyViewHolder {
+        TextView nom, vale;
 
         public MyViewHolder(View item) {
-            nom= (TextView) item.findViewById(R.id.nom);
-            info = (TextView) item.findViewById(R.id.inf);
+            nom = (TextView) item.findViewById(R.id.nom);
+            vale = (TextView) item.findViewById(R.id.valeur);
 
 
         }
-    }
-}
+    }}

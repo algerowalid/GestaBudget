@@ -52,31 +52,42 @@
                 android:onClick="ajoute" />
 
             <Button
-                android:text="Button"
+                android:text="/"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button5"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="Mod" />
 
             <Button
-                android:text="Button"
+                android:text="-"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button7"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="Supp" />
 
             <Button
-                android:text="Button"
+                android:text="F"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button8"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="Finaliser_Tache" />
 
             <Button
-                android:text="Button"
+                android:text="R"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button9"
+                android:layout_weight="1"
+                android:onClick="Renit" />
+
+            <Button
+                android:text="A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button4"
                 android:layout_weight="1" />
 
         </LinearLayout>

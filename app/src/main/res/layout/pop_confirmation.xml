@@ -29,17 +29,17 @@
             android:layout_height="143dp">
 
             <Button
-                android:text="oui"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/oui"
-                android:layout_weight="1" />
-
-            <Button
                 android:text="non"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/non"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="oui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/oui"
                 android:layout_weight="1" />
         </LinearLayout>
 

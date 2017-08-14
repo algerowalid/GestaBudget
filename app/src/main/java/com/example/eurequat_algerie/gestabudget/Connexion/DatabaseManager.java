@@ -303,5 +303,38 @@ public class DatabaseManager {
         return result;
     }
 
+    public int modParametre(int id, String valeur) {
+        // modification d'un enregistrement
+        // valeur de retour : (int) nombre de lignes affectÃ©es par la requÃªte
 
+        int ap = 0;
+        ContentValues values = new ContentValues();
+
+        values.put(KEY_VALEUR, valeur);
+
+        String where = KEY_ID + "=" + id;
+        // String[] whereArgs = {employe.getId()+""};
+
+        ap = db.update(TABLE_PARAMETRE, values, where, null);
+
+        return ap;
+    }
+
+    public Cursor getAllParametres() {
+        // sÃ©lection de tous les enregistrements de la table
+        return db.rawQuery("SELECT * FROM " + TABLE_PARAMETRE+" WHERE "+KEY_FLAG_SUPP+"<2 ORDER BY id DESC", null);
+    }
+    public int SuppParametre(int id) {
+        // suppression d'un enregistrement
+        // valeur de retour : (int) nombre de lignes affectÃ©es par la clause WHERE, 0 sinon
+
+        int a = 0;
+        ContentValues values = new ContentValues();
+        values.put(KEY_FLAG_SUPP,2);
+        String where = KEY_ID + "=" + id;
+        //  String[] whereArgs = {employe.getId()+""};
+        a = db.delete(TABLE_PARAMETRE, where, null);
+
+        return a;
+    }
 }

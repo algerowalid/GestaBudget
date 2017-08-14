@@ -83,6 +83,12 @@
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/rentabilite" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerrenta" />
+
         <Button
             android:text="Envoyer"
             android:textColor="#FFFFFF"

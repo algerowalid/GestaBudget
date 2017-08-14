@@ -16,4 +16,8 @@ public class Activity_accueil extends AppCompatActivity {
         Intent NewIntent = new Intent(Activity_accueil.this,Activity_tache.class);
         startActivity(NewIntent);
     }
+    public void para(View arg){
+        Intent NewIntent = new Intent(Activity_accueil.this,Activity_parametre.class);
+        startActivity(NewIntent);
+    }
 }
