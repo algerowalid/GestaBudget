@@ -38,9 +38,7 @@ public class MainActivity extends AppCompatActivity {
             d.open();
             d.addParametre("login","admin",0);
             d.addParametre("password","admin",0);
-            d.addTache("hanane", "hanane", "hanane" , "2018", 0);
             d.close();
-
             this.finish();
             Intent NewIntent = new Intent(MainActivity.this,Activity_login.class);
             startActivity(NewIntent);

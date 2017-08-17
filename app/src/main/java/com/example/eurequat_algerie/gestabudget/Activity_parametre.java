@@ -43,8 +43,8 @@ public class Activity_parametre extends AppCompatActivity {
         registerClickCallback();
     }
     public void ajouter_parametre(View arg){
-        String n=nom.getText().toString();
-        String v=val.getText().toString();
+        String n=nom.getText().toString().replaceAll("'","''");
+        String v=val.getText().toString().replaceAll("'","''");
         d.open();
         d.addParametre(n,v,0);
         d.close();
@@ -57,7 +57,7 @@ public class Activity_parametre extends AppCompatActivity {
 
 
 
-                    String i = val.getText().toString();
+                    String i = val.getText().toString().replaceAll("'","''");
 
 
 
@@ -81,53 +81,56 @@ public class Activity_parametre extends AppCompatActivity {
 
     }
     public void supprimer_parametre(View arg){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        View popupView = getLayoutInflater().inflate(R.layout.pop_confirmation, null);
+        if(POS !=-1) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            View popupView = getLayoutInflater().inflate(R.layout.pop_confirmation, null);
 
-        final TextView msg=(TextView) popupView.findViewById(R.id.msg1);
-
-
-        Button ajouter=(Button)popupView.findViewById(R.id.oui);
-        Button quitter=(Button)popupView.findViewById(R.id.non);
+            final TextView msg = (TextView) popupView.findViewById(R.id.msg1);
 
 
-        msg.setText("Veuillez confirmer la supression de cette parametre "+mylist.get(POS).getNom());
+            Button ajouter = (Button) popupView.findViewById(R.id.oui);
+            Button quitter = (Button) popupView.findViewById(R.id.non);
 
 
-
-        builder.setView(popupView);
-        DetailalertDialog = builder.create();
-
-        DetailalertDialog.show();
-        DetailalertDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
-        DetailalertDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
-        DetailalertDialog.setCanceledOnTouchOutside(false);
-
-        ajouter.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            msg.setText("Veuillez confirmer la supression de cette parametre " + mylist.get(POS).getNom());
 
 
+            builder.setView(popupView);
+            DetailalertDialog = builder.create();
 
-                d.open();
+            DetailalertDialog.show();
+            DetailalertDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+            DetailalertDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+            DetailalertDialog.setCanceledOnTouchOutside(false);
 
-                int id = mylist.get(POS).getId();
-                d.SuppParametre(id);
-                d.close();
-                DetailalertDialog.dismiss();
-                fillingList();
+            ajouter.setOnClickListener(new Button.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-            }
-        });
-        quitter.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
 
-                DetailalertDialog.dismiss();
-            }
-        });
+                    d.open();
 
+                    int id = mylist.get(POS).getId();
+                    d.SuppParametre(id);
+                    d.close();
+                    DetailalertDialog.dismiss();
+                    fillingList();
+
+                }
+            });
+            quitter.setOnClickListener(new Button.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // TODO Auto-generated method stub
+
+                    DetailalertDialog.dismiss();
+                }
+            });
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Il faut séléctionner un parametre !" , Toast.LENGTH_LONG).show();
+
+        }
 
     }
     public void renit_parametre(View arg){

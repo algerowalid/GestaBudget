@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity__tache_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.eurequat_algerie.gestabudget.Activity_Tache_detail">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_weight="1">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/entre_dargent" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/depense" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reste" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="66dp">
+
+            <Button
+                android:text="+"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ajout"
+                android:onClick="ajout_action" />
+
+            <Button
+                android:text="/"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button13"
+                android:layout_weight="1"
+                android:onClick="mod_rta" />
+
+            <Button
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button14"
+                android:layout_weight="1"
+                android:onClick="sup_rta" />
+
+            <Button
+                android:text="R"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button15"
+                android:layout_weight="1"
+                android:onClick="renit" />
+
+            <Button
+                android:text="R_A"
+                android:layout_width="57dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button16"
+                android:onClick="recherche" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="801dp"
+            android:id="@+id/list_rta" />
+    </LinearLayout>
+</LinearLayout>

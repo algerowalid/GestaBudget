@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@android:color/background_light">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="1dp"
+
+        android:weightSum="1"
+        android:background="#0c606a">
+
+        <Button
+            android:layout_marginLeft="275dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/quitter" />
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spin_action" />
+
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textColorHint="#FFFFFF"
+            android:textSize="14dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:ems="10"
+            android:id="@+id/description"
+            android:gravity="center_vertical|center|start"
+            android:layout_width="280dp" />
+
+
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#FFFFFF"
+            android:textSize="14dp"
+            android:textColor="#FFFFFF"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/date"
+            android:gravity="center_vertical|start" />
+
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColorHint="#FFFFFF"
+            android:textSize="14dp"
+            android:layout_width="280dp"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/total" />
+
+        <Button
+            android:text="Envoyer"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:background="#09565e"
+            android:id="@+id/Ajouter" />
+
+    </LinearLayout>
+
+</LinearLayout>

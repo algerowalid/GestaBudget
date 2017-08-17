@@ -64,19 +64,21 @@ public class Adapter_tache extends BaseAdapter {
         convertView.setBackgroundColor(colors[colorPos]);
 
         mViewHolder.nom.setText(currentListData.getNom());
-        mViewHolder.info.setText(""+currentListData.getInfo());
-
+        mViewHolder.info.setText(currentListData.getInfo());
+        mViewHolder.des.setText(currentListData.getDescription());
+        mViewHolder.dat.setText(currentListData.getDate());
 
         return convertView;
     }
 
     public class MyViewHolder {
-        TextView nom, info;
+        TextView nom, info, des, dat;
 
         public MyViewHolder(View item) {
             nom= (TextView) item.findViewById(R.id.nom);
             info = (TextView) item.findViewById(R.id.inf);
-
+            des = (TextView) item.findViewById(R.id.description);
+            dat = (TextView) item.findViewById(R.id.date);
 
         }
     }

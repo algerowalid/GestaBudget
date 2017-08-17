@@ -20,7 +20,8 @@
         <activity android:name=".Activity_Action" />
         <activity android:name=".Activity_accueil" />
         <activity android:name=".Activity_recap" />
-        <activity android:name=".Activity_parametre"></activity>
+        <activity android:name=".Activity_parametre" />
+        <activity android:name=".Activity_Tache_detail"></activity>
     </application>
 
 </manifest>

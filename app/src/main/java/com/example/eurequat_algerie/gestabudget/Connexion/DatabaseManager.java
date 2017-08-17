@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
 public class DatabaseManager {
 
 
@@ -320,13 +323,27 @@ public class DatabaseManager {
         return ap;
     }
 
-<<<<<<< HEAD
+
     public Cursor getAllParametres() {
         // sÃ©lection de tous les enregistrements de la table
         return db.rawQuery("SELECT * FROM " + TABLE_PARAMETRE+" WHERE "+KEY_FLAG_SUPP+"<2 ORDER BY id DESC", null);
     }
+
+
+    // supprimer employe
     public int SuppParametre(int id) {
-=======
+        // suppression d'un enregistrement
+        // valeur de retour : (int) nombre de lignes affectÃ©es par la clause WHERE, 0 sinon
+
+        int a = 0;
+        ContentValues values = new ContentValues();
+        values.put(KEY_FLAG_SUPP,2);
+        String where = KEY_ID + "=" + id;
+        //  String[] whereArgs = {employe.getId()+""};
+        a = db.delete(TABLE_PARAMETRE, where, null);
+
+        return a;
+    }
 
 
 
@@ -368,7 +385,7 @@ public class DatabaseManager {
 
     // supprimer employe
     public int SuppAction(int id) {
->>>>>>> 6e2a315e6c4046244fb3e1e4ed19e3f8df0e28cc
+
         // suppression d'un enregistrement
         // valeur de retour : (int) nombre de lignes affectÃ©es par la clause WHERE, 0 sinon
 
@@ -377,23 +394,75 @@ public class DatabaseManager {
         values.put(KEY_FLAG_SUPP,2);
         String where = KEY_ID + "=" + id;
         //  String[] whereArgs = {employe.getId()+""};
-<<<<<<< HEAD
-        a = db.delete(TABLE_PARAMETRE, where, null);
 
-        return a;
-    }
-=======
         a = db.delete(TABLE_ACTION, where, null);
 
         return a;
     }
+    public int SuppRta(int id) {
+
+        // suppression d'un enregistrement
+        // valeur de retour : (int) nombre de lignes affectÃ©es par la clause WHERE, 0 sinon
+
+        int a = 0;
+        ContentValues values = new ContentValues();
+        values.put(KEY_FLAG_SUPP,2);
+        String where = KEY_ID + "=" + id;
+        //  String[] whereArgs = {employe.getId()+""};
+
+        a = db.delete(TABLE_RTA, where, null);
+
+        return a;
+    }
+
+
 
     public Cursor getAllActions() {
         // sÃ©lection de tous les enregistrements de la table
         return db.rawQuery("SELECT * FROM " + TABLE_ACTION+" WHERE "+KEY_FLAG_SUPP+"<2 ORDER BY id DESC", null);
     }
 
+   public int modRta(int id,int id_t, int ida, String desciption, double qn, double prix, double tot) {
+        // modification d'un enregistrement
+        // valeur de retour : (int) nombre de lignes affectÃ©es par la requÃªte
+
+        int ap = 0;
+        ContentValues values = new ContentValues();
+        values.put(KEY_ID_TACHE,id_t);
+        values.put(KEY_ID_ACTION,ida);
+        values.put(KEY_DESCRIPTION, desciption);
+        values.put(KEY_QNT, qn);
+        values.put(KEY_PU, prix);
+        values.put(KEY_TOTAL, tot);
+        String where = KEY_ID + "=" + id;
+        // String[] whereArgs = {employe.getId()+""};
+
+        ap = db.update(TABLE_RTA, values, where, null);
+
+        return ap;
+    }
+    public long addRta(int id_ta, int id_ac, String description , String dat, double qn, double prix, double tot) {
+        // Ajout d'un enregistrement dans la table
+
+        long result = 0;
+        ContentValues values = new ContentValues();
+        values.put(KEY_ID_TACHE, id_ta);
+        values.put(KEY_ID_ACTION, id_ac);
+        values.put(KEY_DESCRIPTION, description);
+        values.put(KEY_DATE, dat);
+        values.put(KEY_QNT, qn);
+        values.put(KEY_PU, prix);
+        values.put(KEY_TOTAL, tot);
+
+        // insert() retourne l'id du nouvel enregistrement insÃ©rÃ©, ou -1 en cas d'erreur
+        result = db.insert(TABLE_RTA, null, values);
+        return result;
+    }
+    public Cursor getAllRTA() {
+        // sÃ©lection de tous les enregistrements de la table
+        return db.rawQuery("SELECT * FROM " + TABLE_RTA, null);
+    }
 
 
->>>>>>> 6e2a315e6c4046244fb3e1e4ed19e3f8df0e28cc
+
 }

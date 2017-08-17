@@ -28,16 +28,11 @@ public class Activity_Action extends AppCompatActivity {
 
     DatabaseManager d= new DatabaseManager(this);
     Context context =Activity_Action.this;
-
     public ListView list;
     TextView nbr;
     AlertDialog DetailalertDialog;
-
-    int POS;
-
+    int POS=-1;
     ArrayList<action> mylist ;
-
-
     EditText nm;
     Spinner spin;
 
@@ -58,16 +53,10 @@ public class Activity_Action extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, spinnerArray);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(adapter);
-
-
         fillingList();
         registerClickCallback();
 
     }
-
-
-
-
     public void fillingList(){
 
         mylist = new ArrayList<action>();
@@ -111,17 +100,12 @@ public class Activity_Action extends AppCompatActivity {
             }
         });
     }
-
-
-
     public void ajout (View arg){
 
         if(nm.getText().toString().trim().length()>0){
-
             String des =  nm.getText().toString().replaceAll("'","''");
             int a = spin.getSelectedItemPosition();
 
-            Log.i("information",a+"  "+des);
             d.open();
             d.addAction(des,a);
             d.close();
@@ -134,11 +118,9 @@ public class Activity_Action extends AppCompatActivity {
         }
 
     }
-
-
     public void modif(View arg){
 
-        if(POS>0) {
+        if(POS !=-1) {
             if (nm.getText().toString().trim().length() > 0) {
 
                 String des = nm.getText().toString().replaceAll("'", "''");
@@ -162,7 +144,7 @@ public class Activity_Action extends AppCompatActivity {
 
     public void supp(View arg){
 
-        if(POS>0) {
+        if(POS !=-1) {
 
 
                 int id =mylist.get(POS).getId();
