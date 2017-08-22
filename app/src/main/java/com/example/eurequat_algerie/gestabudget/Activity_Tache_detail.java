@@ -3,9 +3,12 @@ package com.example.eurequat_algerie.gestabudget;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -41,6 +44,7 @@ public class Activity_Tache_detail extends AppCompatActivity {
     ArrayList<detail> mylist ;
     public ListView listV;
     public ListView listB;
+    public double tt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,15 +75,77 @@ public class Activity_Tache_detail extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             View popupView = getLayoutInflater().inflate(R.layout.pop_ajout_rta_action, null);
             final EditText desc = (EditText) popupView.findViewById(R.id.description);
-            final EditText quant = (EditText) popupView.findViewById(R.id.quantit);
+
+        final EditText quant = (EditText) popupView.findViewById(R.id.quantit);
             final EditText prix = (EditText) popupView.findViewById(R.id.prix_unitaire);
-            final EditText tot = (EditText) popupView.findViewById(R.id.total);
+            final TextView toota=(TextView)popupView.findViewById(R.id.toot);
+
             final Spinner spina = (Spinner) popupView.findViewById(R.id.spin_action);
             Button ajouter = (Button) popupView.findViewById(R.id.Ajouter);
             Button quitter = (Button) popupView.findViewById(R.id.quitter);
 
 
-            Fill_spinner(spina);
+
+        quant.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+               if(quant.getText().toString().length()>0 && prix.getText().toString().length()>0){
+                   double q = Double.parseDouble(quant.getText().toString());
+                   double p = Double.parseDouble(prix.getText().toString());
+
+                   double tt= q*p;
+
+                   toota.setText(""+tt);
+               }else{
+                   toota.setText("0");
+               }
+            }
+        });
+
+
+        prix.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                if(quant.getText().toString().length()>0 && prix.getText().toString().length()>0){
+                    double q = Double.parseDouble(quant.getText().toString());
+                    double p = Double.parseDouble(prix.getText().toString());
+
+                    tt= q*p;
+
+                    toota.setText(""+tt);
+                }else{
+                    toota.setText("0");
+                }
+            }
+        });
+
+        Fill_spinner(spina);
 
 
             builder.setView(popupView);
@@ -97,15 +163,18 @@ public class Activity_Tache_detail extends AppCompatActivity {
                     String de = desc.getText().toString();
                     String qua = quant.getText().toString();
                     String p = prix.getText().toString();
-                    String t = tot.getText().toString();
                     String act = spina.getSelectedItem().toString();
                     String[] ab = act.split(Pattern.quote("."));
                     int ida = Integer.parseInt(ab[0]);
                     acti = ab[1];
                     String da = tools.setCurrentDate();
 
+
+
+
+
                     d.open();
-                    d.addRta(Activity_tache.idtache, ida, de, da, Double.valueOf(qua), Double.valueOf(p), Double.valueOf(t));
+                    d.addRta(Activity_tache.idtache, ida, de, da, Double.valueOf(qua), Double.valueOf(p),tt);
                     d.close();
                     DetailalertDialog.dismiss();
                     fillingList();
@@ -125,6 +194,9 @@ public class Activity_Tache_detail extends AppCompatActivity {
 
 
     }
+
+
+
     public void fillingList(){
 
         mylist = new ArrayList<detail>();

@@ -19,7 +19,7 @@
             android:layout_height="143dp">
 
             <TextView
-                android:text="Designation de l'action :"
+                android:hint="Designation de l'action :"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView" />
@@ -74,7 +74,7 @@
                 android:onClick="supp" />
 
             <Button
-                android:text="dsf"
+                android:text="Rénitialisation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button4"
@@ -88,10 +88,22 @@
             android:layout_height="match_parent"
             android:layout_weight="01">
 
-            <ListView
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/list" />
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="377dp"
+                        android:id="@+id/list" />
+                </LinearLayout>
+            </ScrollView>
+
         </LinearLayout>
     </LinearLayout>
 

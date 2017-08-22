@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 #Tue Aug 22 15:18:42 WAT 2017
+=======
+#Tue Aug 22 12:57:37 UTC 2017
+>>>>>>> aa3cfef1e1051a18991f74ceeb4389dd68aca171

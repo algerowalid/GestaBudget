@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Tue Aug 22 15:19:15 WAT 2017
 base.0=D\:\\AndroidStudioProjects\\GestaBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+=======
+#Tue Aug 22 12:57:41 UTC 2017
+base.0=C\:\\Users\\HP\\Documents\\GitHub\\GestaBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+>>>>>>> aa3cfef1e1051a18991f74ceeb4389dd68aca171
 renamed.0=classes.dex
 file.0=D\:\\AndroidStudioProjects\\GestaBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

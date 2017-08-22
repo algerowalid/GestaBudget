@@ -5,8 +5,13 @@
     density="mdpi"
     format="8"
     plugin-version="2.2.3"
+<<<<<<< HEAD
     timestamp="443810727672846"
     token="6675773429726758732"
+=======
+    timestamp="15864618254681"
+    token="5694372402571735642"
+>>>>>>> aa3cfef1e1051a18991f74ceeb4389dd68aca171
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
