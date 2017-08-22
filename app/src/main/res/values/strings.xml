@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GestaBudget</string>
+    <string name="quantit">Mettre votre quantiter ici</string>
+    <string name="prix_unitaire">Mettre votre prix unitaire ici</string>
 </resources>

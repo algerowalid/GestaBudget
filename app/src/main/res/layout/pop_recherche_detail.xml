@@ -24,6 +24,12 @@
             android:id="@+id/quitter" />
 
 
+        <TextView
+            android:text="Action:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" />
+
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,7 +47,8 @@
             android:ems="10"
             android:id="@+id/description"
             android:gravity="center_vertical|center|start"
-            android:layout_width="280dp" />
+            android:layout_width="280dp"
+            android:hint="description" />
 
 
         <EditText
@@ -53,10 +60,11 @@
             android:textColor="#FFFFFF"
             android:layout_width="280dp"
             android:layout_height="35dp"
-            android:inputType="textPersonName"
+            android:inputType="date"
             android:ems="10"
             android:id="@+id/date"
-            android:gravity="center_vertical|start" />
+            android:gravity="center_vertical|start"
+            android:hint="date" />
 
 
         <EditText
@@ -68,12 +76,13 @@
             android:layout_width="280dp"
             android:textColor="#FFFFFF"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
+            android:inputType="number"
             android:ems="10"
-            android:id="@+id/total" />
+            android:id="@+id/total"
+            android:hint="total" />
 
         <Button
-            android:text="Envoyer"
+            android:text="chercher"
             android:textColor="#FFFFFF"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="12dp"

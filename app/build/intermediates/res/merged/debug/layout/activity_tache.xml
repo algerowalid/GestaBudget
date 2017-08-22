@@ -8,7 +8,6 @@
     tools:context="com.example.eurequat_algerie.gestabudget.Activity_tache">
 
 
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -22,16 +21,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/nombre" />
+                android:id="@+id/nombre"
+                android:hint="nombre de tache" />
 
             <TextView
-                android:text="TextView"
+                android:hint="nombre de totale verser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/montantgv" />
 
             <TextView
-                android:text="TextView"
+                android:hint="nombre de totale dépenser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/montantgd" />
@@ -68,7 +68,7 @@
                 android:onClick="Supp" />
 
             <Button
-                android:text="F"
+                android:text="Finaliser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button8"
@@ -76,7 +76,7 @@
                 android:onClick="Finaliser_Tache" />
 
             <Button
-                android:text="R"
+                android:text="Rénitialisation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button9"
@@ -84,7 +84,7 @@
                 android:onClick="Renit" />
 
             <Button
-                android:text="A"
+                android:text="détails tache"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button4"
@@ -106,10 +106,21 @@
             android:layout_height="match_parent"
             android:layout_weight="01">
 
-            <ListView
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/listev" />
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="342dp"
+                        android:id="@+id/listev" />
+                </LinearLayout>
+            </ScrollView>
 
         </LinearLayout>
 
