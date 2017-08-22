@@ -3,111 +3,111 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="f293bd8eed108477143bb5dc421d782e1e5644b2">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\instant-run_bb1a2e33afb274f51a387e4c0eeaa799ca9f185e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.3.1_e4447323ba0263e58fd7f99624258e1f584f1595.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.3.1_15bf74b5dd22d42c5566bdf1606a90d90120a72e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.3.1_241d7ae648a0b5545fc798dbb36b360d9a2da36f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.3.1_0fa5932fd5139633118caea9b75cf3b1fe5fa2f9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="4117cdf1f4636150d0095ead39426335262699cc">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_41dc6c96bc3a6b968e958e743316b4f2dfda6193.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
+        jar="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.3.1_51e141527c47f28c26661f67000977f45e5ba9a7.jar" />
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.3.1_b8db9367dd7327f2f30b58be7f7a38c9f931bc38.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jar="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.3.1_374a6b3820b5fab78e92121c0ea843f7eb01db64.jar" />
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.3.1_e07f0c8e11cf1c660ac5bc463e7add71f7c20d1e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jar="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.3.1_7cbad4be79bb831951c2b9a60c510eff0136cbd3.jar" />
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.3.1_d1e54768e3fc53a2fb0d78e4956272ca78f5b500.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
+        jar="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8cb332cb815cc2c7a53311da2c467f25757ab52d">
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\instant-run_1823f9d459ef71a118751faa9579d8ea9b9851fe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.3.1_53b60f3b91c65bc3360540022206ab20aa50e537.jar" />
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.3.1_a0cca032409ba10d83c74b3de5c3eeff1139d6e1.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
+        jar="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.3.1_c50f7199489f33c2a060260f9e85399e0926e020.jar" />
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.3.1_2dd2f38fc66cb22dfc749cf3a9d0ed14c1965e11.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jar="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.3.1_0d8d615c0e1d814549e64a9252aaf8c6fa801e55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Eurequat-Algerie\AppData\Local\Android\sdkbon\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="C:\Users\HP\Documents\GitHub\GestaBudget\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_84e506f3b4be4546a96ff2d7729ac6f60fef9667.jar" />
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_606ff648487e3237735953ffe063b41228ca912f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.3.1_684cd32af34cbe4c9240cc5baed1ba814a7c289a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5c330833fd306b10f96b6179f34721d638d99bbd">
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_4d5c214d6ee8a2d4b482845a28c5b234c09a7ccc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.3.1_aa1052012ea4b26e2d93c43221d505108d425917.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\AndroidStudioProjects\GestaBudget\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.3.1_7437036e53c2754a54e37b102672fd930fcd818b.jar" />
     </item>
 
 </items>
